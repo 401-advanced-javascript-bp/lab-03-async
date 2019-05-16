@@ -18,12 +18,12 @@ describe('File Reader Module', () => {
   });
 
 
-  it('reads 3 files', done => {
-    let files = ['file1.txt', 'file2.txt', 'file2.txt'];
+  it('reads 4 files', done => {
+    let files = ['file1.txt', 'file2.txt', 'file3.txt', 'test.txt'];
     reader(files, (err,data) => {
       expect(err).toBeNull();
       expect(data instanceof Array ).toBeTruthy();
-      expect(data.length ).toBe(3);
+      expect(data.length ).toBe(4);
       done();
     });
   });
